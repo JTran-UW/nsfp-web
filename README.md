@@ -1,2 +1,1 @@
-# nsfp-web
-New Storefront Project Web
+# New Storefront Project Website
