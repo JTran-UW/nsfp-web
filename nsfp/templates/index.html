@@ -12,7 +12,12 @@
         <script src="{% static 'script.js' %}"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="The New Storefront Project aims to beautify the internet through collaboration with local businesses. We combine design, software development, and visual arts to perfectly translate a brand online.">
+        <meta property="og:title" content="New Storefront Project">
+        <meta property="og:description" content="The New Storefront Project aims to beautify the internet through collaboration with local businesses. We combine design, software development, and visual arts to perfectly translate a brand online.">
+        <meta property="og:image" content="{% static 'logo.svg' %}">
     </head>
+
     <body>
         <div class="reveal reveal-up delay-3000" id="link-card">
             <p class="bold">NSF Project</p>
@@ -26,97 +31,104 @@
 
         <img src="{% static 'logo.svg' %}" id="logo" class="reveal reveal-up delay-3000" alt="NSF Project Logo">
 
+        <!--Home page-->
         <div id="front-text">
             <h1 id="splash-text">
                 <span class="reveal reveal-right">In this <span class="bold underline pop-text" id="new">new</span> world,<br></span>
-                <span class="reveal reveal-right delay-1000">the <span class="bold underline pop-text" id="storefront">storefront</span> has changed.<br></span>
+                <span class="reveal reveal-right delay-1000">the <span class="bold underline pop-text" id="storefront">storefront</span> is online.<br></span>
                 <span class="reveal reveal-right delay-2000">This is our <span class="bold underline pop-text" id="project">project.</span></span>
             </h1>
 
             <h2 class="reveal reveal-up delay-3000" id="by-line">by joshua tran</h2>
         </div>
 
-        <section class="section" id="about">
-            <h2 class="reveal-scroll reveal-up section-title underline">About</h2>
+        <div id="reveal-wrap">
 
-            <p class="paragraph reveal-scroll reveal-up">The NSF Project is dedicated to bringing the beauty of our storefronts to the internet. We offer everything your brand needs to create a stunning site all for a single, affordable price. We design logos and webpages, make sure your store ranks on Google, and even offer on-site photography as needed.</p>
-            
-            <div id="timeline">
-                <div id="line"></div>
+            <!--About section-->
+            <section class="section" id="about">
+                <h2 class="reveal-scroll reveal-up section-title underline">About</h2>
 
-                <div class="reveal-scroll reveal-right tl-block">
-                    <img src="{% static 'media/teach.jpg' %}" alt="Josh teaching kids coding">
-                    <p class="tl-block-text"><span class="bold">I’m Josh, software developer</span> and Mukilteo native. For the past three years, I have worked as a designer and programmer both independently and for Seattle companies.</p>
-                </div>
+                <p class="paragraph reveal-scroll reveal-up">The NSF Project is dedicated to bringing the beauty of our storefronts to the internet. We offer everything your brand needs to create a stunning site all for a single, affordable price. We design logos and webpages, make sure your store ranks on Google, and even offer on-site photography as needed. <a href="#contact">Contact us</a> to learn more</p>
+                
+                <div id="timeline">
+                    <div id="line"></div>
 
-                <div class="reveal-scroll reveal-left tl-block" id="graduation">
-                    <img src="{% static 'media/grad3.jpeg' %}" alt="Josh graduating">
-                    <p class="tl-block-text"><span class="bold">Since graduating this year,</span> I was inspired to bring my experience to the community, when I noticed a lack of online branding at my local favorites.</p>
-                </div>
-
-                <div class="reveal-scroll reveal-right tl-block">
-                    <img src="{% static 'logo.svg' %}" alt="Logo">
-                    <p class="tl-block-text"><span class="bold">It spawned New Storefront,</span> a project merging design, tech, and business to revive the online storefront as we emerge from the pandemic.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="work">
-            <h2 class="reveal-scroll reveal-up section-title underline">Work</h2>
-
-            <p class="reveal-scroll reveal-up">The NSF Project is brand new! In the meantime, here are other designs by the team.</p>
-            
-            <div class="reveal-scroll reveal-up">
-                <div class="work-gallery" id="1" onclick="expand(this)">
-                    <div class="gal-header">
-                        <h3 class="bold">Sydney's Nook</h3>
-                        <i class="gg-chevron-up" id="icon-1"></i>
+                    <div class="reveal-scroll reveal-right tl-block">
+                        <img src="{% static 'media/teach.jpg' %}" alt="Josh teaching kids coding">
+                        <p class="tl-block-text"><span class="bold">I’m Josh, software developer</span> and Mukilteo native. For the past three years, I have worked as a designer and programmer both independently and for Seattle companies.</p>
                     </div>
-                    
-                    <div id="pic-1" class="gal-content">
-                        <p>A personal blog for fashion/lifestyle content creator Sydney Lai.</p>
-                        <img src="{% static 'media/snook.png' %}" alt="Sydney's Nook homepage">
+
+                    <div class="reveal-scroll reveal-left tl-block" id="graduation">
+                        <img src="{% static 'media/grad3.jpeg' %}" alt="Josh graduating">
+                        <p class="tl-block-text"><span class="bold">Since graduating this year,</span> I was inspired to bring my experience to the community, when I noticed a lack of online branding at my local favorites.</p>
+                    </div>
+
+                    <div class="reveal-scroll reveal-right tl-block">
+                        <img src="{% static 'logo.svg' %}" alt="Logo">
+                        <p class="tl-block-text"><span class="bold">It spawned New Storefront,</span> a project merging design, tech, and business to revive the online storefront as we emerge from the pandemic.</p>
                     </div>
                 </div>
+            </section>
 
-                <div class="work-gallery" id="2" onclick="expand(this)">
-                    <div class="gal-header">
-                        <h3 class="bold">Lakeside Eats</h3>
-                        <i class="gg-chevron-up" id="icon-2"></i>
+            <!--Work section-->
+            <section class="section" id="work">
+                <h2 class="reveal-scroll reveal-up section-title underline">Work</h2>
+
+                <p class="reveal-scroll reveal-up">The NSF Project is brand new! In the meantime, here are other designs by the team.</p>
+                
+                <div class="reveal-scroll reveal-up">
+                    <div class="work-gallery" id="1" onclick="expand(this)">
+                        <div class="gal-header">
+                            <h3 class="bold">Sydney's Nook</h3>
+                            <i class="gg-chevron-up" id="icon-1"></i>
+                        </div>
+                        
+                        <div id="pic-1" class="gal-content">
+                            <p>A personal blog for fashion/lifestyle content creator Sydney Lai.</p>
+                            <img src="{% static 'media/snook.png' %}" alt="Sydney's Nook homepage">
+                        </div>
                     </div>
-                    
-                    <div id="pic-2" class="gal-content">
-                        <p>An online food delivery platform for Seattle high school, Lakeside.</p>
-                        <img src="{% static 'media/ls-eats.png' %}" alt="Lakeside Eats homepage">
+
+                    <div class="work-gallery" id="2" onclick="expand(this)">
+                        <div class="gal-header">
+                            <h3 class="bold">Lakeside Eats</h3>
+                            <i class="gg-chevron-up" id="icon-2"></i>
+                        </div>
+                        
+                        <div id="pic-2" class="gal-content">
+                            <p>An online food delivery platform for Seattle high school, Lakeside.</p>
+                            <img src="{% static 'media/ls-eats.png' %}" alt="Lakeside Eats homepage">
+                        </div>
+                    </div>
+
+                    <div class="work-gallery" id="3" onclick="expand(this)">
+                        <div class="gal-header">
+                            <h3 class="bold">IBY Lab</h3>
+                            <i class="gg-chevron-up" id="icon-3"></i>
+                        </div>
+                        
+                        <div id="pic-3" class="gal-content">
+                            <p>A homepage and event planner for youth education non-profit, Innovation by Youth Lab.</p>
+                            <img src="{% static 'media/ibylab.png' %}" id="pic-3" alt="IBY Lab homepage">
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="work-gallery" id="3" onclick="expand(this)">
-                    <div class="gal-header">
-                        <h3 class="bold">IBY Lab</h3>
-                        <i class="gg-chevron-up" id="icon-3"></i>
-                    </div>
-                    
-                    <div id="pic-3" class="gal-content">
-                        <p>A homepage and event planner for youth education non-profit, Innovation by Youth Lab.</p>
-                        <img src="{% static 'media/ibylab.png' %}" id="pic-3" alt="IBY Lab homepage">
-                    </div>
+            <!--Contact section-->
+            <section class="section" id="contact">
+                <h2 class="reveal-scroll reveal-up section-title underline">Contact</h2>
+
+                <div class="reveal-scroll reveal-up">
+                    <h3>Interested in working with us or have questions? Reach out to us below.</h3>
+                    <p>Phone: +1 (425)-345-5662</p>
+                    <p>Email: <a href="mailto: hello@nsfproj.dev">hello@nsfproj.dev</a></p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="section" id="contact">
-            <h2 class="reveal-scroll reveal-up section-title underline">Contact</h2>
-
-            <div class="reveal-scroll reveal-up">
-                <h3 class="bold">Reach out to us at the following!</h3>
-                <p>Phone: +1 (425)-345-5662</p>
-                <p>Email: <a href="mailto: hello@nsfproj.dev">hello@nsfproj.dev</a></p>
-            </div>
-        </section>
-
-        <footer>
-            <p>The New Storefront Project is a work by Joshua Tran</p>
-        </footer>
+            <footer>
+                <p>The New Storefront Project is a work by Joshua Tran</p>
+            </footer>
+        </div>
     </body>
 </html>

@@ -33,6 +33,12 @@ $(function() {
     });
 
     tlIncrement = 100 / $(".tl-block").length;
+
+    setTimeout(function() {
+        $("#reveal-wrap").css({
+            display: "block"
+        })
+    }, 3000);
 });
 
 function expand(elem) {
