@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'Frank Ruhl Libre';
+    src: url('fonts/FrankRuhlLibre-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Frank Ruhl Libre Bold';
+    src: url('fonts/FrankRuhlLibre-Bold.ttf');
+}
+
+/**
+General styles
+*/
+
+body {
+    background-color: #FFF5DA;
+}
+
+html {
+    font-family: 'Frank Ruhl Libre';
+    font-size: 24px;
+}
+
+* {
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 2.16rem;
+}
+
+.bold {
+    font-family: 'Frank Ruhl Libre Bold';
+}
+
+.background-white {
+    background-color: white;
+}
+
+a {
+    color: black;
+}
+
+.reveal {
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+
+.reveal-scroll {
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+
+.reveal-up {
+    transform: translateY(30px);
+}
+
+.reveal-right {
+    transform: translateX(-30px);
+}
+
+.reveal-left {
+    transform: translateX(30px);
+}
+
+.delay-1000 {
+    transition-delay: 1s;
+}
+
+.delay-2000 {
+    transition-delay: 2s;
+}
+
+.delay-3000 {
+    transition-delay: 3s;
+}
+
+.underline {
+    position: relative;
+    text-decoration: none;
+}
+
+.underline::after {
+    position: absolute;
+    content: '';
+    height: 0.3em;
+    bottom: 0.2em;
+    width: 0%;
+    left: 0;
+    right: 0;
+    background: #FF5050;
+    opacity: 0.5;
+
+	/* optional animation */
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.show-underline::after {
+    width: 100%;
+}
+
+.grow-after-800::after {
+    width: 100%;
+    transition-delay: 800ms;
+}
+
+.grow-after-1800::after {
+    width: 100%;
+    transition-delay: 1.8s;
+}
+
+.grow-after-2800::after {
+    width: 100%;
+    transition-delay: 2.8s;
+}
+
+.pop-text {
+    font-size: 3.41rem;
+}
+
+.section {
+    width: 70%;
+    margin: 14rem auto 0px auto;
+}
+
+.section-title {
+    display: inline-block;
+    font-family: 'Frank Ruhl Libre Bold';
+    font-size: 2.58rem;
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/**
+Home styles
+*/
+
+#logo {
+    position: absolute;
+    top: 13.3%;
+    left: 11.17%;
+    height: 120px;
+}
+
+#front-text {
+    margin: 0px auto;
+    width: fit-content;
+    margin-top: 28vh;
+}
+
+#splash-text {
+    font-size: 2.58rem;
+    line-height: 1.25;
+    margin-bottom: 1.6rem;
+}
+
+#splash-text .reveal {
+    display: block;
+}
+
+#by-line {
+    margin-top: 0px;
+    font-size: 1.3rem;
+}
+
+#link-card {
+    position: absolute;
+    top: 1.05rem;
+    right: 1.05rem;
+    background-color: white;
+    padding: 0.625rem 1.66rem;
+}
+
+#link-card p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#link-card * {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+}
+
+#links a:hover::after {
+    width: 100%;
+}
+
+/**
+* Work styles
+*/
+
+.work-gallery {
+    width: 100%;
+    cursor: pointer;
+}
+
+.gal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.gal-content {
+    max-height: 0px;
+    width: 75%;
+    margin: 0px auto;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.gal-content img {
+    width: 100%;
+}
+
+.show-content {
+    max-height: 1000px !important;
+}
+
+/**
+* About styles
+*/
+
+#timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+#line {
+    position: absolute;
+    height: 0%;
+    width: 3px;
+    left: 50%;
+    background-color: #FF5050;
+    opacity: 0.5;
+    transition: all 1s ease-in-out;
+}
+
+.tl-block { 
+    width: 70%;
+}
+
+.tl-block img {
+    width: 100%;
+}
+
+.tl-block-text {
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/**
+* Footer styles
+*/
+
+footer {
+    margin-top: 14rem;
+    text-align: center;
+}
+
+/**
+* Media queries
+*/
+
+@media screen and (max-width: 1200px) {
+    .section {
+        width: 80%;
+    }
+
+    .tl-block {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gal-content {
+        width: 100%;
+    }
+
+    .section {
+        width: 90%;
+    }
+
+    #timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .tl-block {
+        grid-column: 1 !important;
+        width: 100%;
+    }
+
+    #logo {
+        height: 85px;
+    }
+
+    #splash-text {
+        font-size: 2rem;
+    }
+
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #splash-text {
+        font-size: 1.8rem;
+    }
+}
