@@ -19,6 +19,7 @@ body {
 html {
     font-family: 'Frank Ruhl Libre';
     font-size: 24px;
+    scroll-behavior: smooth;
 }
 
 * {

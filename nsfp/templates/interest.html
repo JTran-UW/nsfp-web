@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block head %}
+    <meta name="description" content="Fill out the Season 1 Interest Form until Sep 3 for the opportunity to collaborate as available.">
+    <meta property="og:title" content="NSFP Season 1 Interest Form">
+    <meta property="og:description" content="Fill out the Season 1 Interest Form until Sep 3 for the opportunity to collaborate as available.">
+    <meta property="og:image" content="{% static 'logo.svg' %}">
     <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
 {% endblock %}
 
@@ -14,9 +19,9 @@
 
         <form action="" method="POST" id="interest" class="reveal reveal-up">
             {% csrf_token %}
-
+            
             {% for field in form %}
-                <input autocomplete="off" type="{{ field.type }}" name="{{ field.name }}" placeholder="{{ field.label }}" class="underline interest-input">
+                {{ field }}
             {% endfor %}
 
             <input type="submit" value="Submit" id="submit" class="interest-input">
