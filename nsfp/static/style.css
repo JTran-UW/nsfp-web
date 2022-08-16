@@ -209,10 +209,6 @@ Home styles
     width: 100%;
 }
 
-#last-link {
-    margin-right: 0px;
-}
-
 /**
 * Work styles
 */
@@ -243,6 +239,11 @@ Home styles
 
 .show-content {
     max-height: 1000px !important;
+}
+
+#price-splash {
+    margin: 14rem auto 0px auto;
+    text-align: center;
 }
 
 /**
@@ -311,6 +312,8 @@ footer {
 .interest-input {
     border: 0px;
     border-bottom: 2px solid black;
+    padding-left: 0px;
+    border-radius: 0px;
     outline: none;
     background-color: transparent;
     font-size: 1rem;
@@ -318,8 +321,13 @@ footer {
     margin: 0.8rem 0px;
 }
 
+#interest-input::placeholder {
+    color: #7d7d7d;
+}
+
 #submit {
     border: 2px solid black;
+    color: black;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -376,5 +384,15 @@ footer {
 @media screen and (max-width: 400px) {
     #splash-text {
         font-size: 1.8rem;
+    }
+
+    #links {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .link-margin {
+        margin-right: 0px;
+        margin-bottom: 1rem;
     }
 }
